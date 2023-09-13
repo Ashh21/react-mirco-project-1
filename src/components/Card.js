@@ -1,11 +1,10 @@
 import React from 'react'
 
-
 const Card = ({ data }) => {
     const { name, cardNum, mm, yy, cvv } = data;
     return (
 
-        <div className='card-main'>
+        <div className='card'>
             <div className='card1'>
                 <div className='card-div-1'>
                     <h2> {cardNum} </h2>

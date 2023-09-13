@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@800&family=Roboto&display=swap');
+
+  @import url('https://fonts.googleapis.com/css2?family=Inter&family=Roboto&display=swap');
 
 
 .main {
@@ -20,7 +21,7 @@
   justify-content: center;
   align-items: center;
   padding: 1rem;
-  width: fit-content;
+  width: fit-content; 
   flex: 1;
 }
 
@@ -115,7 +116,7 @@ label {
   display: flex;
   flex-direction: column;
   justify-content: end;
-  background-image: url('../src/images/Rectangle\ 27.png');
+  background-image: url('./images/Component\ 1.png');
   background-size: cover;
   margin: 6rem 0 0 15rem;
   width: 487px;
@@ -123,13 +124,14 @@ label {
   border-radius: 0.4rem;
 }
 
+
 .card-div-1 {
   display: flex;
   justify-content: center;
   align-content: center;
   color: #FFF;
   font-family: 'Inter', sans-serif;
-  font-size: 20px;
+  font-size: 18px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -154,7 +156,7 @@ label {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: linear-gradient(#FFFFFF, #D9D9D9);
+  background-image: url('./images/Component\ 2.png');
   background-size: cover;
   margin: 4rem 0 0 22rem;
   width: 487px;
@@ -167,7 +169,7 @@ label {
   flex-direction: column;
   margin-top: 2rem;
   background-color: black;
-  width: 100%;
+  width: 480px;
   height: 52px;
 }
 
@@ -200,4 +202,13 @@ label {
   font-weight: 600;
   line-height: normal;
   letter-spacing: 1.875px;
+}
+
+.error{
+  color: #F81212;
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
