@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-const Form = ({ setData }) => {
+const CardForm = ({ setData }) => {
     const [name, setName] = useState('')
     const [cardNum, setCardNum] = useState('');
     const [mm, setMm] = useState('');
@@ -11,14 +11,8 @@ const Form = ({ setData }) => {
     const [cvv, setCvv] = useState('');
     const [errors, setErrors] = useState("")
 
-    const notify = () => toast('Success!', {
+    const notify = () => toast('Success ✅ ', {
         position: "top-center",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: false,
-        pauseOnHover: false,
-        draggable: true,
-        progress: undefined,
         theme: "light",
     });
 
@@ -35,21 +29,21 @@ const Form = ({ setData }) => {
         }
 
         if (!mm) {
-            newErrors.mm = 'month is required';
+            newErrors.mm = 'Month is required';
         }
 
         if (!yy) {
-            newErrors.yy = 'year is required';
+            newErrors.yy = 'Year is required';
         }
 
         if (isNaN(cvv) || cvv.length < 3) {
-            newErrors.cvv = 'CVV is required'
+            newErrors.cvv = 'CVC must be numeric'
         }
 
         if (Object.keys(newErrors).length === 0) {
             const newData = { name, cardNum, mm, yy, cvv }
-            setData(newData)
-            notify()
+            setData(newData);
+            notify();
             setName('');
             setCardNum('');
             setMm("");
@@ -65,7 +59,7 @@ const Form = ({ setData }) => {
     return (
         <div className='form'>
             <form onSubmit={handleSubmit}>
-                <div className='form-div flex1'>
+                <div className='form-div'>
                     <label>CARDHOLDER NAME</label>
                     <input className='input' placeholder='e.g. Jane Appleseed' type='text'
                         value={name}
@@ -75,7 +69,7 @@ const Form = ({ setData }) => {
                     />
                     <span className="error">{errors.name}</span>
                 </div>
-                <div className='form-div flex1'>
+                <div className='form-div'>
                     <label>CARD NUMBER </label>
                     <InputMask className='input' mask='9999 9999 9999 9999' maskChar=" " placeholder='e.g. 1234 5678 9123 0000' type='text'
                         value={cardNum}
@@ -88,7 +82,7 @@ const Form = ({ setData }) => {
                 </div>
 
                 <div className='flex'>
-                    <div className='form-div flex1'>
+                    <div className='form-div'>
                         <label>EXP.  DATE ( MM / YY)</label>
                         <div className='input-div'>
                             <div className='exp-input'>
@@ -108,7 +102,6 @@ const Form = ({ setData }) => {
                                 />
                                 <span className="error">{errors.yy}</span>
                             </div>
-
                         </div>
                     </div>
                     <div className='form-div flex1'>
@@ -129,4 +122,4 @@ const Form = ({ setData }) => {
     )
 }
 
-export default Form
+export {CardForm} ;

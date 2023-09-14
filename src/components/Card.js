@@ -6,10 +6,10 @@ const Card = ({ data }) => {
 
         <div className='card'>
             <div className='card1'>
-                <div className='card-div-1'>
+                <div className='card1-div1'>
                     <h2> {cardNum} </h2>
                 </div>
-                <div className='card-div-2'>
+                <div className='card1-div2'>
                     <div>
                         <h2> {name} </h2>
                     </div>

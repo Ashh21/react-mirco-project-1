@@ -1,20 +1,22 @@
 import React, { useState } from 'react'
 import { Card } from './Card';
-import Form from './Form';
+import { CardForm } from './CardForm';
+import { ToastContainer } from 'react-toastify';
 
 const CreditCardScreen = () => {
 
     const [data, setData] = useState({
-        name: "Xyz",
+        name: "JANE APPLESEED",
         cardNum: "0000 0000 0000 0000",
-        mm: "05", yy: "25",
-        cvv: "123"
+        mm: "00", yy: "00",
+        cvv: "000"
     });
 
     return (
         <div className='main'>
+            <ToastContainer />
             <Card data={data} />
-            <Form setData={setData} />
+            <CardForm setData={setData} />
         </div>
     )
 }

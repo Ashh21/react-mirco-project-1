@@ -4,6 +4,7 @@
 
 .main {
   display: flex;
+  justify-content: center;
 }
 
 .card {
@@ -27,6 +28,8 @@
 
 
 .form-div {
+  display: flex;
+  flex-direction: column;
   padding: 0.6rem;
 }
 
@@ -34,10 +37,6 @@
   display: flex;
 }
 
-.flex1 {
-  display: flex;
-  flex-direction: column;
-}
 
 label {
   font-family: 'Roboto', sans-serif;
@@ -75,7 +74,6 @@ label {
 .exp-input-1 {
   width: 110px;
   height: 40px;
-  margin-bottom: 0.5rem;
   border-radius: 0.4rem;
   outline: none;
   padding-left: 1rem;
@@ -87,7 +85,6 @@ label {
 .cvv-input {
   width: 130px;
   height: 40px;
-  margin-bottom: 0.5rem;
   border-radius: 0.4rem;
   outline: none;
   padding-left: 1rem;
@@ -97,8 +94,8 @@ label {
 }
 
 .btn {
-  width: 445px;
-  height: 40px;
+  width: 447px;
+  height: 50px;
   padding: 0.5rem;
   border-radius: 0.4rem;
   background-color: #220930;
@@ -108,7 +105,6 @@ label {
   font-size: 17px;
   font-style: normal;
   font-weight: 500;
-  line-height: normal;
   letter-spacing: 0.16px;
 }
 
@@ -121,14 +117,14 @@ label {
   margin: 6rem 0 0 15rem;
   width: 487px;
   height: 266px;
-  border-radius: 0.4rem;
+  border-radius: 0.8rem;
 }
 
 
-.card-div-1 {
+.card1-div1 {
   display: flex;
   justify-content: center;
-  align-content: center;
+  align-content: center; 
   color: #FFF;
   font-family: 'Inter', sans-serif;
   font-size: 18px;
@@ -139,10 +135,11 @@ label {
 
 }
 
-.card-div-2 {
+.card1-div2 {
   display: flex;
   justify-content: space-around;
-  padding-bottom: 1rem;
+  padding-bottom: 0.8em;
+  gap: 5rem;
   color: #FFF;
   font-family: 'Roboto', sans-serif;
   font-size: 13px;
@@ -160,8 +157,8 @@ label {
   background-size: cover;
   margin: 4rem 0 0 22rem;
   width: 487px;
-  height: 266px;
-  border-radius: 0.4rem;
+  height: 256px;
+  border-radius: 0.8rem;
 }
 
 .card2-div1 {
@@ -211,4 +208,5 @@ label {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  padding: 0.5rem;
 }
